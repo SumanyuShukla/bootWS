@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>WS MultiChat</h1>
+<div id="register" >
+<label>Enter name</label>
+<input type="text" id="name">
+<input type="button" id="send" value="Submit" onclick="connect(event)">
+</div>
+<div id="mainDiv" style="display:none;">
+<div id="chat"></div>
+<input type="text" id="message">
+<input type="button" value="Send" onclick="send(event)">
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/app.js"></script>
+</html>
