@@ -4,10 +4,10 @@ FROM maven:3.6.0-jdk-11-slim AS build
  RUN mvn -f /home/app/pom.xml clean package
 
 FROM java:8-jdk
-COPY ./target/BootWS-0.0.1-SNAPSHOT.jar /usr/app/
+COPY ./target/websocket-0.0.1-SNAPSHOT.jar /usr/app/
 
 WORKDIR /usr/app
 
 
 
-ENTRYPOINT ["java","-jar","BootWS-0.0.1-SNAPSHOT.jar"] 
+ENTRYPOINT ["java","-jar","websocket-0.0.1-SNAPSHOT.jar"] 
